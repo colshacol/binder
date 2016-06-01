@@ -2,31 +2,35 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <title>BINDER</title>
+  <link rel="stylesheet" href="https://cdn.rawgit.com/colshacol/gitsee/master/dist/styles/reset.css">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,900,400italic' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.rawgit.com/colshacol/box/master/box-grid.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src='https://cdn.rawgit.com/colshacol/gitsee/master/dist/scripts/box-grid.js' defer></script>
   <script src='js/app.js' defer></script>
   <script src='js/binder.js' defer></script>
 </head>
 <body id='app'>
 
-  <h1 id='heading'>Data Binding</h1>
-  <form action="none">
-    <input type="text" bind-text='heading' placeholder='TYPE SOEMTHING HERE'>
-  </form>
+  <header class='box'>
+    <div class="box-col"> <!-- my grid system! -->
+      <h1 id='heading'>Data Binding</h1>
+      <form action="none">
+        <input type="text" bind-text='heading' placeholder='TYPE SOEMTHING HERE'>
+      </form>
+    </div>
+  </header>
+
+
 
   <h1 id="headingThree">Iteration</h1>
-  <div id='iterator' bind-loop='myApp framework in frameworks'>
-    <h3>{{ name }}</h3>
-    <p>{{ description }}</p>
-    <small>It sucks because {{ sucksBecause }}</small>
-    <p>{{ rating }}/10</p>
-    <hr>
+  <div id='iterator' bind-loop='myApp framework in frameworks' bind-temp='a-thing'>
   </div>
 
-  <div id='secondIterator' bind-loop='appTwo things in something'>
-    <h3>{{ first }}</h3>
-    <h3>{{ second }}</h3>
-    <h3>{{ third }}</h3>
-    <br>
+  <div id='secondIterator' bind-loop='appTwo things in something' bind-temp='another-thing'>
   </div>
+
+
 
 
 <template id='a-thing'>
@@ -35,6 +39,13 @@
   <small>It sucks because {{ sucksBecause }}</small>
   <p>{{ rating }}/10</p>
   <hr>
+</template>
+
+<template id="another-thing">
+  <h3>{{ first }}</h3>
+  <h3>{{ second }}</h3>
+  <h3>{{ third }}</h3>
+  <br>
 </template>
 
 </body>
