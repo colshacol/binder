@@ -2,6 +2,9 @@
 
 let BinderApps = {
 
+  // myApp *************
+  // *******************
+
   myApp: {
     host: "app",
     data: {
@@ -27,18 +30,24 @@ let BinderApps = {
       ], // frameworks
       shoe: {
         dog: {
-          name: "doggy",
-          description: "a dog.",
-          sucksBecause: "not a cat.",
-          rating: 5
+          pug: {
+            name: "doggy",
+            description: "a dog.",
+            sucksBecause: "not a cat.",
+            rating: 5
+          }
         }
       }
     } // data
   }, // myApp
 
+
+  // appTwo ***************
+  // **********************
+
   appTwo: {
     host: "twooo",
-    data: [{
+    data: {
       something: [
         {
           first: "val 0.0",
@@ -51,11 +60,21 @@ let BinderApps = {
           third: "val 1.2"
         }
       ]
-    }]
+    }
   } // appTwo
+}; // BinderApps
 
+
+let BinderComponents = {
+  "a-thing": {
+    template: "#a-thing",
+
+  },
+
+  "another-thing": {
+
+  }
 }
-
 
 
 // let myApp = new Binder.app({
