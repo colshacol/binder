@@ -3,15 +3,25 @@
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <title>BINDER</title>
   <script src='js/binder.js' defer></script>
-  <!-- <script src='js/binder.js' defer></script> -->
+  <script src='js/app.js' defer></script>
+  <script src='js/binder-ready.js' defer></script>
 </head>
-<body>
-  <h1 id="message">hi</h1>
-  <div id='app' bind-to="#message"></div>
-  <p id='para'>It is nice to meet you.</p>
+<body id='app'>
+
+  <h1 id='heading'>Data Binding</h1>
   <form action="none">
-  <input id='input' type="text">
-  <button type='button'>yolo</button>
+    <input type="text" bind-text='heading' placeholder='TYPE SOEMTHING HERE'>
   </form>
+
+
+  <h1 id="headingThree">Iteration</h1>
+  <div id='iterator' bind-loop='myApp framework in frameworks'>
+    <h3>{{ name }}</h3>
+    <p>{{ description }}</p>
+    <small>It sucks because {{ sucksBecause }}</small>
+    <p>{{ rating }}/10</p>
+    <hr>
+  </div>
+
 </body>
 </html>
