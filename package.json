@@ -1,0 +1,19 @@
+{
+  "name": "binder",
+  "version": "0.0.0",
+  "description": "A thing.",
+  "main": "index.js",
+  "scripts": {
+    "serve:stylus": "parallelshell 'live-server' 'stylus -w ./build/css'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colshacol/binder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/colshacol/binder/issues"
+  },
+  "homepage": "https://github.com/colshacol/binder#readme"
+}

@@ -1,0 +1,86 @@
+gsm-white = rgb(255,255,255)
+gsm_gray = rgb(245,246,247)
+gsm-blue = rgb(44,62,80)
+gsm-green = rgb(26,188,156)
+gsm-red = rgb(243,73,83)
+
+html { font-size: 16px }
+
+body
+{
+  background: white;
+  color: gsm-blue;
+  font-size: 1.1rem;
+  font-family: 'Lato', sans-serif;
+}
+
+h1,h2,h3,h4
+{
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+h1 { font-size: 3.157rem; }
+
+h2 { font-size: 2.369rem; }
+
+h3 { font-size: 1.777rem; }
+
+h4 { font-size: 1.333rem; }
+
+small, .small_font { font-size: 0.75em; }
+
+header {
+  background-color: gsm_gray;
+  height: 100vh
+}
+
+p#logo {
+  font-size: 3.157rem;
+  font-weight: 900;
+  color: gsm-red;
+
+  span {
+    font-weight: 300;
+  }
+}
+
+
+header form input
+{
+  height: 35px;
+  width: 340px;
+  padding: 10px;
+  border-width: 0px
+  border-style: solid;
+  font-family: 'Oxygen', sans-serif;
+  font-size: .9rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-top: 15px;
+  color: gsm-green;
+}
+
+header form input:focus
+{
+  border-style: none;
+}
+
+header form #sub
+{
+  height: 35px;
+  width: 100px;
+  background: gsm-blue
+  color: white;
+  font-weight: 900;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 1rem;
+  border: none;
+}
+
+
+@media (max-width: 520px) {
+  h2.tagline {
+    font-size: 80%;
+  }
+}

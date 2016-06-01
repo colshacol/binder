@@ -10,11 +10,29 @@ let Binder = (function() {
   //   return this;
   // };
 
+  // Templating functionality **************
+  // ***************************************
+  let templates = (() => {
+    let templateObject = {};
+    Array.from(document.querySelectorAll('template')).forEach((template, i) => {
+      let templateId = template.getAttribute('id');
+      let templateString = template.innerHTML;
+      templateObject[templateId] = templateString;
+    });
+
+    return templateObject;
+  })();
+
+  Array.from(document.querySelectorAll('[bind-temp]')).forEach((el, i) => {
+    let templateToBind = el.getAttribute('bind-temp');
+    el.innerHTML = templates[templateToBind];
+  });
+
   // [bind-text] ***************
   // ***************************
   Array.from(document.querySelectorAll('[bind-text]')).forEach((el,i) => {
     el.addEventListener('keyup', () => {
-      document.getElementById(el.getAttribute('bind-text')).innerText= el.value;
+      document.getElementById(el.getAttribute('bind-text')).innerText = el.value;
     })
   });
 
@@ -99,16 +117,10 @@ let Binder = (function() {
     }; // else
   });
 
-  // Custom component functionality. **************
-  // **********************************************
-  let elem = (obj) => {
-    // stuff.
-    return true;
-  }
+
 
   return {
-    app: app,
-    elem: elem
+    // elem: elem
   }
 
 })();
