@@ -2,9 +2,8 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <title>BINDER</title>
-  <script src='js/binder.js' defer></script>
   <script src='js/app.js' defer></script>
-  <script src='js/binder-ready.js' defer></script>
+  <script src='js/binder.js' defer></script>
 </head>
 <body id='app'>
 
@@ -13,9 +12,8 @@
     <input type="text" bind-text='heading' placeholder='TYPE SOEMTHING HERE'>
   </form>
 
-
   <h1 id="headingThree">Iteration</h1>
-  <div id='iterator' bind-loop='myApp framework in frameworks'>
+  <div id='iterator' bind-loop='myApp framework in shoe.dog'>
     <h3>{{ name }}</h3>
     <p>{{ description }}</p>
     <small>It sucks because {{ sucksBecause }}</small>
