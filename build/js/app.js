@@ -1,5 +1,30 @@
 'use strict';
 
+
+
+
+let frameworks = [
+  {
+    name: "React",
+    description: "Has a virtual DOM.",
+    sucksBecause: "it is difficult to learn.",
+    rating: 4
+  },
+  {
+    name: "Angular",
+    description: "A dying MVC framework.",
+    sucksBecause: "it is ugly as hell.",
+    rating: 3
+  },
+  {
+    name: "Vue",
+    description: "A simple/lightweight MVVM framework.",
+    sucksBecause: "I didn't create it.",
+    rating: 8
+  }
+];
+
+
 let BinderApps = {
 
   // myApp *************
@@ -8,80 +33,7 @@ let BinderApps = {
   myApp: {
     host: "app",
     data: {
-      frameworks: [
-        {
-          name: "React",
-          description: "Has a virtual DOM.",
-          sucksBecause: "it is difficult to learn.",
-          rating: 4
-        },
-        {
-          name: "Angular",
-          description: "A dying MVC framework.",
-          sucksBecause: "it is ugly as hell.",
-          rating: 3
-        },
-        {
-          name: "Vue",
-          description: "A simple/lightweight MVVM framework.",
-          sucksBecause: "I didn't create it.",
-          rating: 8
-        },
-        {
-          name: "React",
-          description: "Has a virtual DOM.",
-          sucksBecause: "it is difficult to learn.",
-          rating: 4
-        },
-        {
-          name: "Angular",
-          description: "A dying MVC framework.",
-          sucksBecause: "it is ugly as hell.",
-          rating: 3
-        },
-        {
-          name: "Vue",
-          description: "A simple/lightweight MVVM framework.",
-          sucksBecause: "I didn't create it.",
-          rating: 8
-        },
-        {
-          name: "React",
-          description: "Has a virtual DOM.",
-          sucksBecause: "it is difficult to learn.",
-          rating: 4
-        },
-        {
-          name: "Angular",
-          description: "A dying MVC framework.",
-          sucksBecause: "it is ugly as hell.",
-          rating: 3
-        },
-        {
-          name: "Vue",
-          description: "A simple/lightweight MVVM framework.",
-          sucksBecause: "I didn't create it.",
-          rating: 8
-        },
-        {
-          name: "React",
-          description: "Has a virtual DOM.",
-          sucksBecause: "it is difficult to learn.",
-          rating: 4
-        },
-        {
-          name: "Angular",
-          description: "A dying MVC framework.",
-          sucksBecause: "it is ugly as hell.",
-          rating: 3
-        },
-        {
-          name: "Vue",
-          description: "A simple/lightweight MVVM framework.",
-          sucksBecause: "I didn't create it.",
-          rating: 8
-        }
-      ], // frameworks
+      frameworks: frameworks, // frameworks
       shoe: {
         dog: {
           pug: {
@@ -92,7 +44,16 @@ let BinderApps = {
           }
         }
       }
-    } // data
+    }, // data
+    methods: [
+      {
+        goAway: (evt, elem) => {
+          elem.addEventListener(evt, () => {
+            elem.style.display = "none";
+          });
+        }
+      }
+    ]
   }, // myApp
 
 
